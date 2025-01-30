@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="frmStart">
+  <grid id="27dc6" row-count="1" column-count="1" layout-manager="GridLayoutManager"
+        same-size-horizontally="false" same-size-vertically="false">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="500" height="200"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+
+    <children>
+      <!-- Panel to hold buttons -->
+      <component id="buttonPanel" class="javax.swing.JPanel">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" anchor="0" fill="3"
+                 hsize-policy="3" vsize-policy="3"/> <!--  Added vsize-policy -->
+        </constraints>
+        <properties/>
+        <children>
+          <component id="loginButton" class="javax.swing.JButton">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" anchor="0" fill="3"
+                     hsize-policy="3" vsize-policy="3"/> <!-- Added vsize-policy -->
+            </constraints>
+            <properties>
+              <text value="Login"/>
+            </properties>
+          </component>
+          <component id="registerButton" class="javax.swing.JButton">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" anchor="0" fill="3"
+                     hsize-policy="3" vsize-policy="3"/> <!-- Added vsize-policy -->
+            </constraints>
+            <properties>
+              <text value="Register"/>
+            </properties>
+          </component>
+        </children>
+      </component>
+    </children>
+  </grid>
+</form>
