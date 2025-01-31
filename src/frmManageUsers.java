@@ -16,11 +16,14 @@ public class frmManageUsers extends JFrame {
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
 
-        // Set the main panel as the content pane
-        setContentPane(pnlContent);
 
-        // Load user data into the table
-        loadUserData();
+        setContentPane(pnlContent);
+        setSize(600, 800);
+        pnlContent.setPreferredSize(new Dimension(600, 800)); // Set preferred size for the main panel
+        pack(); // Resize the frame to fit the preferred size of its components
+
+
+        setVisible(true);
     }
 
     private void loadUserData() {
