@@ -1,3 +1,9 @@
+package forms;
+
+import models.Customer;
+import models.DBAccess;
+import models.User;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -14,9 +20,9 @@ public class frmRegister extends JFrame {
     private JButton registerButton;
 
     public frmRegister() {
-        setSize(600, 800);
+        setSize(600, 600);
         setContentPane(pnlContent);
-        pnlContent.setPreferredSize(new Dimension(600, 800)); // Set preferred size for the main panel
+        pnlContent.setPreferredSize(new Dimension(600, 600)); // Set preferred size for the main panel
         pack(); // Resize the frame to fit the preferred size of its components
         setTitle("Register Page");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -61,18 +67,18 @@ public class frmRegister extends JFrame {
             return;
         }
 
-        if (!db.isEmailUnique(email)) {
-            JOptionPane.showMessageDialog(this, "Email is already registered. Use a different email.");
-            return;
-        }
+//        if (!db.isEmailUnique(email)) {
+//            JOptionPane.showMessageDialog(this, "Email is already registered. Use a different email.");
+//            return;
+//        }
 
         // Create a new user
-        User newUser = new User(username, firstName, lastName, email, password);
+        User newUser = new Customer(username, firstName, lastName, email, password);
 
         // Insert user into the database
-        boolean userAdded = db.addUser(newUser);
+        boolean userAdded = db.addUser(newUser,"models.Customer");
         if (userAdded) {
-            JOptionPane.showMessageDialog(this, "User registered successfully!");
+            JOptionPane.showMessageDialog(this, "models.User registered successfully!");
             dispose(); // Close the form after success
         } else {
             JOptionPane.showMessageDialog(this, "Failed to register user. Please try again.");

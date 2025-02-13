@@ -6,7 +6,7 @@
 
   
 
--- Users Table 
+-- models.Users Table
 
 CREATE TABLE IF NOT EXISTS users (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS Restaurants  (
 
   
 
--- Menu Items Table 
+-- models.Menu Items Table
 
 CREATE TABLE IF NOT EXISTS MenuItems  (
 

@@ -1,18 +1,20 @@
+package forms;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class frmTest extends JFrame {
+public class frmStart extends JFrame {
     private JButton btnRegister;
     private JButton btnLogin;
     private JPanel pnlContent;
     private JLabel lblLogo;
 
-    frmTest(){
-        setSize(800, 600);
-        pnlContent.setPreferredSize(new Dimension(600, 800)); // Set preferred size for the main panel
-        pack(); // Resize the frame to fit the preferred size of its components
+    frmStart(){
+        setSize(600, 600);
+         pnlContent.setPreferredSize(new Dimension(600, 600)); // Set preferred size for the main panel
+        //pack(); // Resize the frame to fit the preferred size of its components
         setContentPane(pnlContent);
         setTitle("Test");
         pack();
@@ -34,6 +36,6 @@ public class frmTest extends JFrame {
     }
 
     public static void main(String[] args) {
-        new frmTest();
+        new frmStart();
     }
 }

@@ -1,7 +1,7 @@
 -- Use the H2 database schema
 -- Sample Data
 
--- Users
+-- models.Users
 INSERT INTO users (username, first_name, last_name, email, password) VALUES
 ('admin', 'System', 'Administrator', 'admin@example.com', 'admin123'),
 ('john_doe', 'John', 'Doe', 'john.doe@example.com', 'password123');
@@ -20,7 +20,7 @@ INSERT INTO Restaurants (name, cuisineType, logoPath) VALUES
 
 
 
--- Menu Items
+-- models.Menu Items
 
 INSERT INTO MenuItems (restaurantId, name, type, price, quantity, imagePath) VALUES
 

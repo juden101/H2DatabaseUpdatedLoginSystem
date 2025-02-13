@@ -1,3 +1,10 @@
+package forms.admin;
+
+import models.Admin;
+import models.Customer;
+import models.DBAccess;
+import models.User;
+
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
@@ -10,7 +17,15 @@ public class frmManageUsers extends JFrame {
 
     private final DBAccess db = DBAccess.getInstance();
 
-    public frmManageUsers() {
+    public frmManageUsers(User user) {
+
+        if (!user.getRole().equalsIgnoreCase("staff")) {
+
+            JOptionPane.showMessageDialog(null, "Access Denied: You are not an admin!", "Error", JOptionPane.ERROR_MESSAGE);
+
+            return;
+
+        }
         setTitle("Manage Users");
         setSize(600, 800);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
@@ -49,6 +64,7 @@ public class frmManageUsers extends JFrame {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new frmManageUsers().setVisible(true));
+       // new frmManageUsers(new Admin(1, "admin", "John", "Doe", "hashed_password", "admin"));
+       new frmManageUsers(new Customer(1, "customer", "John", "Doe", "hashed_password", "customer"));
     }
 }

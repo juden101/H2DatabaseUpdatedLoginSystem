@@ -1,4 +1,6 @@
-public class User {
+package models;
+
+public abstract class User {
     private int id;
     private String userName;
     private String firstName;
@@ -45,9 +47,13 @@ public class User {
         return password; 
     }
 
+    public String getRole() {
+        return "models.User";
+    }
+
     @Override
     public String toString() {
-        return "User{" +
+        return "models.User{" +
                 "userName='" + userName + '\'' +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +

@@ -1,3 +1,5 @@
+package models;
+
 import java.util.List;
 
 public class Users {
@@ -22,9 +24,9 @@ public class Users {
         }
 
         // Insert into the database
-        boolean inserted = dbAccess.addUser(user);
+        boolean inserted = dbAccess.addUser(user,"models.Customer");
         if (inserted) {
-            System.out.println("✅ User added successfully!");
+            System.out.println("✅ models.User added successfully!");
         } else {
             System.out.println("❌ Failed to add user.");
         }

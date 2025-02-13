@@ -1,10 +1,12 @@
-import java.sql.*;
+import models.DBAccess;
+import models.User;
+
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-// Get the DBAccess Singleton instance (this initializes the DB)
+// Get the models.DBAccess Singleton instance (this initializes the DB)
         DBAccess db = DBAccess.getInstance();
 
         // Fetch and display users before adding a new one

@@ -1,3 +1,5 @@
+import models.Users;
+
 public class AppData {
 
     private static AppData instance;
